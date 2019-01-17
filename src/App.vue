@@ -5,7 +5,7 @@
 			v-toolbar-title.white--text RateTime
 		v-content
 			v-card
-				v-data-table.elevation-1(:headers='headers', :items='desserts', :search='search')
+				v-data-table.elevation-1(:headers='headers', :items='desserts', :search='search', hide-actions)
 					template(slot='items', slot-scope='props')
 						td {{ props.item.time }}
 						td {{ props.item.money }}
@@ -40,7 +40,7 @@ export default {
         {
           value: false,
           time: "Frozen Yogurt",
-          money: 159,
+          money: '美金 (USD)',
           fat: 6.0,
           carbs: 24,
           protein: 4.0,
@@ -49,7 +49,7 @@ export default {
         {
           value: false,
           time: "Ice cream sandwich",
-          money: 237,
+          money: '港幣 (HKD)',
           fat: 9.0,
           carbs: 37,
           protein: 4.3,
@@ -58,7 +58,7 @@ export default {
         {
           value: false,
           time: "Eclair",
-          money: 262,
+          money: '英鎊 (GBP)',
           fat: 16.0,
           carbs: 23,
           protein: 6.0,
@@ -67,7 +67,7 @@ export default {
         {
           value: false,
           time: "Cupcake",
-          money: 305,
+          money: '澳幣 (AUD)',
           fat: 3.7,
           carbs: 67,
           protein: 4.3,
@@ -76,7 +76,7 @@ export default {
         {
           value: false,
           time: "Gingerbread",
-          money: 356,
+          money: '加拿大幣 (CAD)',
           fat: 16.0,
           carbs: 49,
           protein: 3.9,
@@ -85,7 +85,7 @@ export default {
         {
           value: false,
           time: "Jelly bean",
-          money: 375,
+          money: '新加坡幣 (SGD)',
           fat: 0.0,
           carbs: 94,
           protein: 0.0,
@@ -94,7 +94,7 @@ export default {
         {
           value: false,
           time: "Lollipop",
-          money: 392,
+          money: '瑞士法郎 (CHF)',
           fat: 0.2,
           carbs: 98,
           protein: 0,
@@ -103,7 +103,7 @@ export default {
         {
           value: false,
           time: "Honeycomb",
-          money: 408,
+          money: '日圓 (JPY)',
           fat: 3.2,
           carbs: 87,
           protein: 6.5,
@@ -112,7 +112,7 @@ export default {
         {
           value: false,
           time: "Donut",
-          money: 452,
+          money: '南非幣 (ZAR)',
           fat: 25.0,
           carbs: 51,
           protein: 4.9,
@@ -121,7 +121,7 @@ export default {
         {
           value: false,
           time: "KitKat",
-          money: 518,
+          money: '瑞典幣 (SEK)',
           fat: 26.0,
           carbs: 65,
           protein: 7,
