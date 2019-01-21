@@ -12,7 +12,9 @@
 			v-card
 				v-card-title 最新更新日期 {{desserts[0].time}}
 					v-spacer
-					v-select(:items='desserts[0].time', label='選擇日期')
+					v-menu(:close-on-content-click='false', v-model='dateSelect', :nudge-right='40', lazy='', transition='scale-transition', offset-y='', min-width='290px')
+						v-text-field(slot='activator', v-model='date', label='Picker without buttons', prepend-icon='event', readonly='')
+						v-date-picker(v-model='date', @input='dateSelect = false')
 				v-data-table.elevation-1(:headers='headers', :items='desserts', hide-actions, disable-initial-sort)
 					template(slot='items', slot-scope='props')
 						td {{ props.item.money }}
@@ -37,6 +39,7 @@ export default {
   name: "app",
   data() {
     return {
+      dateSelect: false,
       headers: [
         {
           text: "幣別",
