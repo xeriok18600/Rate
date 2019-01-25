@@ -1,10 +1,10 @@
 <template lang="pug">
 v-layout
-    v-flex(xs12='', sm6='')
-        v-card
-            v-card-title
-                h3.headline.mb-0 現金買入
-            canvas#myChart
+	v-flex(xs12='', sm6='')
+		v-card
+			v-card-title
+				h3.headline.mb-0 現金買入
+			canvas#myChart
 </template>
 
 <script>
