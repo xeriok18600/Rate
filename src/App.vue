@@ -20,6 +20,7 @@
 			div © {{ new Date().getFullYear() }}
 </template>
 
+
 <style lang="scss">
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
 * {
