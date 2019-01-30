@@ -44,7 +44,7 @@ export default {
     this.getData();
   },
   methods: {
-    getData() {
+    getData(date) {
       this.axios
         .get(
           "https://limitless-sierra-15237.herokuapp.com/QueryDateTime/" +
@@ -56,6 +56,12 @@ export default {
         })
         .catch(error => {
           console.log(error);
+          var d = new Date();
+          if (error) {
+            d.setDate(d.getDate() - 1);
+            this.date = d.toISOString().substr(0, 10);
+            return this.getData(this.date);
+          }
         });
     }
   }
